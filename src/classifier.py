@@ -9,20 +9,30 @@ class FileCategory(str, Enum):
     ARCHIVES = "Archives"
     CODE = "Code"
     EXECUTABLES = "Executables"
+    DATA = "Data"
+    SPREADSHEETS = "Spreadsheets"
     OTHERS = "Others"
 
 EXTENSION_MAP = {
     # Images
     '.jpg': FileCategory.IMAGES, '.jpeg': FileCategory.IMAGES, '.png': FileCategory.IMAGES,
-    '.gif': FileCategory.IMAGES, '.bmp': FileCategory.IMAGES, '.svg': FileCategory.IMAGES,
-    '.webp': FileCategory.IMAGES, '.tiff': FileCategory.IMAGES, '.ico': FileCategory.IMAGES,
+    '.gif': FileCategory.IMAGES, '.bmp': FileCategory.IMAGES, '.webp': FileCategory.IMAGES, 
+    '.tiff': FileCategory.IMAGES, '.ico': FileCategory.IMAGES,
+    '.svg': FileCategory.IMAGES, # SVG is technically code but viewed as image
     
     # Documents
     '.pdf': FileCategory.DOCUMENTS, '.doc': FileCategory.DOCUMENTS, '.docx': FileCategory.DOCUMENTS,
     '.txt': FileCategory.DOCUMENTS, '.rtf': FileCategory.DOCUMENTS, '.odt': FileCategory.DOCUMENTS,
-    '.xls': FileCategory.DOCUMENTS, '.xlsx': FileCategory.DOCUMENTS, '.ppt': FileCategory.DOCUMENTS,
-    '.pptx': FileCategory.DOCUMENTS, '.csv': FileCategory.DOCUMENTS, '.md': FileCategory.DOCUMENTS,
+    '.md': FileCategory.DOCUMENTS,
     
+    # Spreadsheets
+    '.xls': FileCategory.SPREADSHEETS, '.xlsx': FileCategory.SPREADSHEETS, 
+    '.ods': FileCategory.SPREADSHEETS, 
+    
+    # Data
+    '.csv': FileCategory.DATA, '.json': FileCategory.DATA, '.xml': FileCategory.DATA, 
+    '.sql': FileCategory.DATA, '.yaml': FileCategory.DATA, '.yml': FileCategory.DATA,
+
     # Audio
     '.mp3': FileCategory.AUDIO, '.wav': FileCategory.AUDIO, '.aac': FileCategory.AUDIO,
     '.flac': FileCategory.AUDIO, '.ogg': FileCategory.AUDIO, '.m4a': FileCategory.AUDIO,
@@ -40,7 +50,6 @@ EXTENSION_MAP = {
     '.css': FileCategory.CODE, '.java': FileCategory.CODE, '.cpp': FileCategory.CODE,
     '.c': FileCategory.CODE, '.h': FileCategory.CODE, '.php': FileCategory.CODE,
     '.ts': FileCategory.CODE, '.go': FileCategory.CODE, '.rs': FileCategory.CODE,
-    '.json': FileCategory.CODE, '.xml': FileCategory.CODE, '.sql': FileCategory.CODE,
     
     # Executables
     '.exe': FileCategory.EXECUTABLES, '.msi': FileCategory.EXECUTABLES, '.bat': FileCategory.EXECUTABLES,
