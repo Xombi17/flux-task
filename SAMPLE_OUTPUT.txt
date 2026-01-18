@@ -1,0 +1,13 @@
+Flux ⚡  Intelligent Directory Organizer
+
+ℹ Scanning: /Users/demo/Downloads
+
+Proposed Moves (4 files)
+File          Category    Destination
+--------------------------------------
+song.mp3      Audio       Audio/song.mp3
+resume.pdf    Documents   Documents/resume.pdf
+script.py     Code        Code/script.py
+image1.jpg    Images      Images/image1.jpg
+
+⚠ DRY RUN ACTIVE: No files were moved.
