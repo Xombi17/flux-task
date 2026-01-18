@@ -1,2 +1,4 @@
-typer
-rich
+# No external dependencies required for this assignment.
+# The following were used in the prototype but removed for the final submission:
+# typer
+# rich

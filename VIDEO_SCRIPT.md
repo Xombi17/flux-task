@@ -9,7 +9,7 @@
 *Switch to the Terminal.*
 **Narration**: "Flux is a Python-based CLI utility. Let's see it in action."
 *Type command:* `python -m src.main organize /path/to/downloads --dry-run`
-**Narration**: "First, I run it with the dry-run flag. Safety is key. I don't want to move files without knowing where they go. Flux scans the directory and presents a beautiful table using the 'Rich' library, showing me exactly what will happen."
+**Narration**: "First, I run it with the dry-run flag. Safety is key. I don't want to move files without knowing where they go. Flux scans the directory and presents a detailed table using a custom, zero-dependency UI system, showing me exactly what will happen."
 
 *Type command:* `python -m src.main organize /path/to/downloads`
 *Accept the prompt (y).*
